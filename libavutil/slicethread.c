@@ -103,7 +103,8 @@ int avpriv_slicethread_create(AVSliceThread **pctx, void *priv,
 
     av_assert0(nb_threads >= 0);
     if (!nb_threads) {
-        int nb_cpus = av_cpu_count();
+        //int nb_cpus = av_cpu_count();
+        int nb_cpus = 7;
         if (nb_cpus > 1)
             nb_threads = nb_cpus + 1;
         else
